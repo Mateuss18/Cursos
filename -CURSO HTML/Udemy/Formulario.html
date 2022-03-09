@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="processo.js" method="POST">
+        <label>Text</label><br>
+        <input type="text" name="texto1" placeholder="Text">
+
+        <br><br>
+
+        <label>Password</label><br>
+        <input type="password" name="senha">
+
+        <br><br>
+
+        <label>Oculto</label><br>
+        <input type="hidden" name="informacao_oculta" value="mensagem oculta">
+
+        <br><br>
+
+        <label>Select</label>
+        <select name="selecao">
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2</option>
+        </select>
+
+        <br><br>
+
+        <label>Radio</label><br>
+        <input type="radio" name="radio1" value="1">Valor 1 <br>
+        <input type="radio" name="radio1" value="2">Valor 2
+
+        <br><br>
+
+        <label>Chackbox</label><br>
+        <input type="checkbox" name="ck1" value="">Valor 1 <br>
+        <input type="checkbox" name="ck1" value="">Valor 2 <br>
+        <input type="checkbox" name="ck1" value="">Valor 3 <br>
+
+        <br>
+
+        <input type="submit" value="Enviar" name="submit">
+    </form>
+</body>
+</html>

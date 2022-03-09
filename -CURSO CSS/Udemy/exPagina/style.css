@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(206, 206, 206);
+    height: 80px;
+}
+
+article{
+    background-color: rgb(117, 117, 117);
+    height: 200px;
+    width: 30%;
+    float: right;
+}
+
+aside{
+    background-color: rgb(94, 94, 94);
+    height: 200px;
+    width: 70%;
+    float: left;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+}

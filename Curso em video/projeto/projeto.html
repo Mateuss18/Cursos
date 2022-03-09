@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <style>
+        body
+        {
+            background-color: black;
+            font: normal 20pt Arial;
+        }
+        input
+        {
+            width: 100px;
+            height: 30px;
+        }
+        h1
+        {
+           color: rgb(255, 0, 0);
+           background-color: cyan;
+           font-weight: bold;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <input type="number" name="tn1" id="tn1"> +
+    <input type="number" name="tn2" id="tn2">
+    <input type="button" value="Confirmar" onclick="confirm()">
+    ---------------------------------------------------------------------------------------------------------------<input type="number" name="tn3" id="tn3">  -
+    <input type="number" name="tn4" id="tn4">
+    <div id="som"></div>
+    <script>
+         function confirm(){
+              var nb1 = window.document.getElementById('tn1')
+              var nb2 = window.document.querySelector('input#tn2')
+              var som = window.document.getElementById('som')
+              var nb1 = Number(nb1.value)
+              var nb2 = Number(nb2.value)
+              var s = nb1 + nb2
+              som.innerHTML = `O resultado da soma é: ${s}`
+      }
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo{
+    float: left;
+}
+
+#menu{
+    float: right;
+    margin: 30px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+#menu a:hover{
+    background-color: black;
+    color: white;
+    padding: 48px 15px 48px 15px;
+}
+
+footer{
+    clear: both;
+    background-color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #111111;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+#principal{
+    background-image: url('stars.jpg');
+    background-size: 100%;
+    min-height: 337px;
+    padding: 80px 0 80px 0;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 1px 1px 1px #111111;
+    margin: 0 0 50px 0;
+}
+
+p{
+    color: blanchedalmond;
+    text-shadow: 1px 1px 1px #111111;
+    font-size: 15px;
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+}
+
+.efeito{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0 80px 0;
+}
+
+header{
+    background-color: rgb(245, 245, 245);
+    height: 70px;
+    padding: 15px 0 25px 0;
+}
