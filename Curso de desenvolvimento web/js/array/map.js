@@ -8,5 +8,7 @@ let resultado = numeros.map(function(e){
 console.log(resultado)
 
 const soma10 = e => e + 10
-resultado = numeros.map(soma10)
+const triplo3 = e => e * 3
+const paraDinheiro = e => `R$ ${parseFloat(e).toFixed(2).replace('.', ',')}`
+resultado = numeros.map(soma10).map(triplo3).map(paraDinheiro)
 console.log(resultado)
