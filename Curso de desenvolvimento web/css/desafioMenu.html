@@ -1,51 +1,165 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio Menu</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Oswald"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <title>Desafio Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        /* ... */
-    </style>
-</head>
+            body {
+                background-color: rgb(155, 155, 155);
+                font-family: 'Oswald';
+            }
 
-<body>
-    <header class="cabecalho">
-        <div class="logo">
-            <a href="#inicio">
-                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
-            </a>
-        </div>
-        <button class="menu-toggle">
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="#inicio">Início</a>
-                </li>
-                <li>
-                    <a href="#cursos">Cursos</a>
-                </li>
-                <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
-        </nav>
-        <aside class="autenticacao">
-            <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
-        </aside>
-    </header>
+            .cabecalho {
+                background-color: rgb(34, 34, 34);
+                border-bottom: solid 5px rgb(0, 118, 191);
+                box-sizing: content-box;
+                height: 80px;
+            }
 
-    <script>
-        // ...
-    </script>
-</body>
+            .logo {
+                display: inline-block;
+                height: 80px;
+                padding: 15px;
+            }
 
+            .logo img{
+                height: 100%;
+            }
+
+            .menu-toggle{
+                float: right;
+                color: #eee;
+                background-color: #555;
+                border-radius: 5px;
+                height: 40px;
+                padding: 10px 20px;
+                margin: 20px 15px;
+            }
+
+            .menu{
+                display: inline-block;
+                vertical-align: top;
+                height: 80px;
+                padding: 25px;
+            }
+
+            .menu ul {
+                list-style-type: none;
+            }
+
+            .menu li{
+                display: inline-block;
+            }
+
+            .cabecalho a{
+                text-decoration: none;
+                font: 1.3em;
+                color: rgb(238, 238, 238);
+            }
+
+            .menu a{
+                padding: 20px;
+            }
+
+            .menu a:hover,
+            .menu a.selected{
+                color: rgb(0, 0, 0);
+                background-color: rgb(0, 118, 191);
+            }
+
+            .autenticacao{
+                float: right;
+                height: 80px;
+                padding: 25px;
+            }
+
+            .destaque{
+                background-color: #bd000d;
+                border-radius: 30px;
+                padding: 10px 25px;
+                margin: 10px;
+            }
+
+            @media(min-width: 679px){
+                .menu-toggle{
+                    display: none;
+                }
+            }
+
+            @media(max-width:680px){
+                .menu{
+                    display: none;
+                }
+            }
+
+            @media(max-width:880px){
+                .autenticacao{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="logo">
+                <a href="#inicio">
+                    <img
+                        src="http://files.cod3r.com.br/curso-web/logo.png"
+                        alt="Logo"
+                    />
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fa fa-lg fa-bars"></i>
+            </button>
+            <nav class="menu">
+                <ul>
+                    <li class="pagina">
+                        <a href="#inicio">Início</a>
+                    </li>
+                    <li class="pagina">
+                        <a href="#cursos">Cursos</a>
+                    </li>
+                    <li class="pagina">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li class="pagina">
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <aside class="autenticacao">
+                <a href="#login">Login</a>
+                <a href="#registrar" class="botao destaque">Registrar</a>
+            </aside>
+        </header>
+
+        <script>
+            window.onhashchange = function(e){
+                const oldURL = e.oldURL.split('#')[1]
+                const newURL = e.newURL.split('#')[1]
+                const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+                const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+                oldMenu && oldMenu.classList.remove('selected')
+                newMenu && newMenu.classList.add('selected')
+            }
+        </script>
+    </body>
 </html>
