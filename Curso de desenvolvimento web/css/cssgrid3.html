@@ -6,12 +6,46 @@
     <title>CSS Grid #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        header{
+            grid-area: cabecalho;
+        }
+
+        nav{
+            grid-area: navegacao;
+        }
+
+        main{
+            grid-area: conteudo;
+        }
+
+        footer{
+            grid-area: rodape;
+        }
+
+        body{
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+                'cabecalho cabecalho'
+                'navegacao conteudo'
+                'rodape rodape'
+            ;
+        }
     </style>
 </head>
 
 <body>
-    <main class="tag">CONTEÚDO</main>
+    <main class="tag">CONTEÚDO
+        <div><h1>ola</h1></div>
+
+    </main>
     <header class="tag">CABEÇALHO</header>
     <footer class="tag">RODAPÉ</footer>
     <nav class="tag">NAVEGAÇÃO</nav>
